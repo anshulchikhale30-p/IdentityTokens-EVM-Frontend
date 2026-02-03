@@ -1,3 +1,5 @@
+// Demo page mapping protocol actions to minimal UI
+
 "use client";
 
 import { useState } from "react";
