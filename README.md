@@ -1,6 +1,6 @@
-# Mini DIT Prototype – Frontend (GSoC 2026 Prep)
+# Mini DIT Prototype – Frontend 
 
-⚠️ This is a **1-week experimental frontend prototype**, built as part of my **GSoC 2026 preparation**.
+⚠️ This is a **1-week experimental frontend prototype**, built as part of my **DIT 2026 preparation**.
 
 This repository is **forked from StabilityNexus/IdentityTokens-EVM-Frontend** and is **not a production-ready implementation**.
 
@@ -39,7 +39,7 @@ This is a short-term learning prototype built in parallel with the smart-contrac
 
 ---
 
-## Relation to GSoC 2026
+## Relation to DIT 2026
 This frontend complements the **Mini DIT smart-contract prototype** and supports exploration of the proposed **Decentralized Identity Tokens (DIT)** direction before the GSoC proposal phase.
 
 The goal is to demonstrate:
