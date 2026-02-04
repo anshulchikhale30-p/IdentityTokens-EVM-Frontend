@@ -78,6 +78,7 @@ export const FeatureSection: React.FC = () => {
           <div className="absolute right-0 bottom-2 hidden gap-4 md:flex">
             <button
               onClick={scrollLeft}
+              aria-label="Scroll left"
               className="group flex h-12 w-12 items-center justify-center rounded-full bg-brand-blue transition-colors hover:bg-brand-blue-hover"
             >
               <svg
@@ -98,6 +99,7 @@ export const FeatureSection: React.FC = () => {
             </button>
             <button
               onClick={scrollRight}
+              aria-label="Scroll Right"
               className="group flex h-12 w-12 items-center justify-center rounded-full bg-brand-blue transition-colors hover:bg-brand-blue-hover"
             >
               <svg
