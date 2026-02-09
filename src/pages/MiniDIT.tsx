@@ -48,7 +48,10 @@ export default function MiniDIT() {
         <input
           type="number"
           placeholder="Enter Token ID"
-          onChange={(e) => setViewTokenId(Number(e.target.value))}
+          onChange={(e) => {
+            const val = e.target.value;
+            setViewTokenId(val === "" ? null : Number(val));
+          }}
           style={{ padding: "6px", marginRight: "8px" }}
         />
 
