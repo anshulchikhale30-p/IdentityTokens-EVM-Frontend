@@ -53,7 +53,10 @@ export default function IdentityCard({ tokenId }: Props) {
         <strong>Age Group:</strong> {ageGroup || "—"}
       </p>
 
-      {github && (
+const isSafeUrl = (url: string) =>
+  url.startsWith("https://") || url.startsWith("http://");
+
+      {github && isSafeUrl(github) && (
         <p>
           <strong>GitHub:</strong>{" "}
           <a href={github} target="_blank" rel="noopener noreferrer">
@@ -62,7 +65,7 @@ export default function IdentityCard({ tokenId }: Props) {
         </p>
       )}
 
-      {linkedin && (
+      {linkedin && isSafeUrl(linkedin) && (
         <p>
           <strong>LinkedIn:</strong>{" "}
           <a href={linkedin} target="_blank" rel="noopener noreferrer">
