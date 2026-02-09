@@ -13,12 +13,6 @@ This frontend is inspired by ideas from:
 - **TNT (Trust Network Tokens)**
 - **VouchMe (On-chain testimonials)**
 
----
-
-
-
----
-
 ## Non-Goals
 - Full DID UX flows
 - Advanced privacy or ZK interfaces
