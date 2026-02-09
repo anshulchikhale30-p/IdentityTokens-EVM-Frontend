@@ -53,8 +53,7 @@ export default function IdentityCard({ tokenId }: Props) {
         <strong>Age Group:</strong> {ageGroup || "—"}
       </p>
 
-const isSafeUrl = (url: string) =>
-  url.startsWith("https://") || url.startsWith("http://");
+
 
       {github && isSafeUrl(github) && (
         <p>
