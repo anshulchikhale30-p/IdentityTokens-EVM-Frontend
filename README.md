@@ -34,7 +34,7 @@ This frontend is inspired by ideas from:
 ---
 
 ## Status
-🚧 **Work in progress**  
+ Done  
 This is a short-term learning prototype built in parallel with the smart-contract exploration.
 
 ---
