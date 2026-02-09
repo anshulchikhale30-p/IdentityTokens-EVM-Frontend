@@ -37,7 +37,7 @@ export default function EndorseIdentity() {
         abi: MINI_DIT_ABI,
         functionName:
           mode === "endorse" ? "endorse" : "revokeEndorsement",
-        args: [BigInt(fromTokenId), BigInt(toTokenId)],
+        args: [BigInt("fromTokenId"), BigInt("toTokenId")],
       });
 
       setTxHash(hash);
