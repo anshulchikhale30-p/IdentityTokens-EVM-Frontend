@@ -15,13 +15,7 @@ This frontend is inspired by ideas from:
 
 ---
 
-## Scope (Intentionally Small)
-- Wallet connection (MetaMask / injected providers)
-- Minting self-issued identity tokens
-- Viewing owned identity tokens
-- Creating on-chain endorsements between identities
-- Revoking endorsements
-- Displaying basic identity metadata
+
 
 ---
 
