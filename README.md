@@ -1,48 +1,159 @@
-# Mini DIT Prototype – Frontend (GSoC 2026 Prep)
+# IdentityTokens EVM Frontend (P-Mini DIT Prototype)
 
-⚠️ This is a **1-week experimental frontend prototype**, built as part of my **GSoC 2026 preparation**.
-
-This repository is **forked from StabilityNexus/IdentityTokens-EVM-Frontend** and is **not a production-ready implementation**.
+A **Next.js 13+ App Router** based frontend for the **Decentralized Identity Tokens (DIT)** system on EVM chains. This prototype focuses on identity creation, viewing, and endorsement flows and is designed to be GSoC‑ready and easy to deploy.
 
 ---
 
-## Goal
-To prototype a **minimal frontend interface** for interacting with **Decentralized Identity Tokens (DIT)** smart contracts, focusing on usability and clarity rather than completeness.
+## ✨ Features
 
-This frontend is inspired by ideas from:
-- **TNT (Trust Network Tokens)**
-- **VouchMe (On-chain testimonials)**
-
----
-
-## Scope (Intentionally Small)
-- Wallet connection (MetaMask / injected providers)
-- Minting self-issued identity tokens
-- Viewing owned identity tokens
-- Creating on-chain endorsements between identities
-- Revoking endorsements
-- Displaying basic identity metadata
+* 🆔 Create decentralized identities
+* 🔗 View identity details via dynamic routes
+* 🤝 Endorse identities on-chain (UI-ready)
+* 🧩 Modular component architecture
+* 🎨 Tailwind CSS styling
+* ⚡ App Router (`app/`) with layouts
 
 ---
 
-## Non-Goals
-- Full DID UX flows
-- Advanced privacy or ZK interfaces
-- Off-chain identity verification
-- Production-grade UI/UX polish
+## 🧱 Tech Stack
+
+* **Next.js 13+** (App Router)
+* **TypeScript**
+* **Tailwind CSS**
+* **EVM-compatible wallet support (planned)**
 
 ---
 
-## Status
-🚧 **Work in progress**  
-This is a short-term learning prototype built in parallel with the smart-contract exploration.
+## 📁 Project Structure
+
+```
+app/
+├── layout.tsx          # Root layout (Navbar + global styles)
+├── page.tsx            # Home page
+├── create/
+│   └── page.tsx        # Create Identity page
+├── endorse/
+│   └── page.tsx        # Endorse Identity page
+├── identity/
+│   └── [id]/
+│       └── page.tsx    # Dynamic Identity detail page
+
+components/
+├── Navbar.tsx
+├── IdentityCard.tsx
+└── EndorseButton.tsx
+
+lib/
+└── store.ts            # Global state / utilities
+
+styles/
+└── globals.css         # Tailwind global styles
+
+public/
+└── stability.svg
+
+# Config
+package.json
+tailwind.config.js
+postcss.config.js
+tsconfig.json
+```
 
 ---
 
-## Relation to GSoC 2026
-This frontend complements the **Mini DIT smart-contract prototype** and supports exploration of the proposed **Decentralized Identity Tokens (DIT)** direction before the GSoC proposal phase.
+## 🚀 Getting Started
 
-The goal is to demonstrate:
-- Understanding of the project domain
-- Ability to prototype end-to-end systems
-- Thoughtful scoping and experimentation
+### 1️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 2️⃣ Run development server
+
+```bash
+npm run dev
+```
+
+App will be available at:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🎨 Styling
+
+* Tailwind CSS is configured
+* Global styles are imported in `app/layout.tsx`
+
+```ts
+import "@/styles/globals.css";
+```
+
+---
+
+## 🔧 Path Aliases
+
+This project uses `@/` aliasing.
+
+**tsconfig.json**:
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  }
+}
+```
+
+---
+
+## 🌐 Deployment
+
+This frontend is **Vercel-ready**.
+
+```bash
+npm run build
+```
+
+Then deploy via Vercel Dashboard or CLI.
+
+---
+
+## 🧪 Status
+
+* UI flows complete
+* Wallet + smart contract integration: **in progress**
+* Optimized for GSoC / open‑source contributions
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repo
+2. Create a feature branch
+3. Commit changes
+4. Open a Pull Request
+
+Please follow `DCO.md` and `Contributors.md`.
+
+---
+
+## 📜 License
+
+Apache 2.0
+
+---
+
+## 🙌 Maintainer
+
+**Anshul Chikhale**
+
+Building decentralized identity infrastructure 🚀
