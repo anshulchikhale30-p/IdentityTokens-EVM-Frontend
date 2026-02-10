@@ -1,11 +1,12 @@
 import { identities, endorsements } from "@/lib/store";
 
-export default function IdentityProfile({
+export default async function IdentityProfile({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const id = Number(params.id);
+  const { id: rawId } = await params;
+  const id = Number(rawId);
   const identity = identities.find((i) => i.id === id);
 
   if (!identity) return <p>Identity not found</p>;
