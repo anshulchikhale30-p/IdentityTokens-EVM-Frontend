@@ -1,6 +1,6 @@
 # IdentityTokens EVM Frontend (P-Mini DIT Prototype)
 
-A **Next.js 13+ App Router** based frontend for the **Decentralized Identity Tokens (DIT)** system on EVM chains. This prototype focuses on identity creation, viewing, and endorsement flows and is designed to be GSoC‑ready and easy to deploy.
+A **Next.js 13+ App Router–based** frontend for the **Decentralized Identity Tokens (DIT)** system on EVM chains. This prototype focuses on identity creation, viewing, and endorsement flows and is designed to be GSoC‑ready and easy to deploy.
 
 ---
 
