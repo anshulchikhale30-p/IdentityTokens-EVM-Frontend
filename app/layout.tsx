@@ -1,15 +1,13 @@
-import { Hero } from "@/components/Hero";
-import { HowItWorks } from "@/components/HowItWorks";
-import { FeatureSection } from "@/components/FeatureSection";
-import CTASection from "@/components/CTASection";
+import "./globals.css";
 
-export default function Home() {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <>
-      <Hero />
-      <HowItWorks />
-      <FeatureSection />
-      <CTASection />
-    </>
+    <html lang="en">
+      <body>{children}</body>
+    </html>
   );
 }
