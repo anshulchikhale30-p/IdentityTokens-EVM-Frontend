@@ -1,7 +1,17 @@
-import type { NextConfig } from "next";
+const isGithubPages = process.env.DEPLOY_TARGET === "GITHUB";
 
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
+
+  ...(isGithubPages && {
+    output: "export",
+    basePath: process.env.BASE_PATH || "",
+    images: {
+      unoptimized: true,
+    },
+  }),
 };
 
-export default nextConfig;
+module.exports = nextConfig;
+
