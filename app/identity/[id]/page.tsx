@@ -3,10 +3,9 @@ import { identities, endorsements } from "@/lib/store";
 export default async function IdentityProfile({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 }) {
-  const { id: rawId } = await params;
-  const id = Number(rawId);
+  const id = Number(params.id);
   const identity = identities.find((i) => i.id === id);
 
   if (!identity) return <p>Identity not found</p>;
@@ -23,11 +22,13 @@ export default async function IdentityProfile({
 
       <h3 className="mt-4 font-semibold">Endorsed By</h3>
       <ul className="list-disc ml-6">
-        {endorsements[id]?.length
-          ? endorsements[id].map((eid) => (
-              <li key={eid}>Identity #{eid}</li>
-            ))
-          : "No endorsements yet"}
+        {endorsements[id]?.length ? (
+          endorsements[id].map((eid) => (
+            <li key={eid}>Identity #{eid}</li>
+          ))
+        ) : (
+          <li>No endorsements yet</li>
+        )}
       </ul>
     </>
   );
