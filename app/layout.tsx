@@ -1,10 +1,6 @@
-import "../styles/globals.css";
-import Navbar from "@/components/Navbar";
-
-export const metadata = {
-  title: "Mini Decentralized Identity Tokens",
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 const atypFont = localFont({
@@ -45,10 +41,10 @@ const utsahaFont = localFont({
 
 export const metadata: Metadata = {
   title: "Decentralized Identity Token",
+  description: "Portable, Recoverable and Self-Sovereign Identity",
   icons: {
     icon: "/assets/logo.svg",
   },
-  description: "Portable, Recoverable and Self-Sovereign Identity",
 };
 
 export default function RootLayout({
@@ -58,18 +54,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-100">
+      <body
+        className={`${atypFont.variable} ${garamondFont.variable} ${utsahaFont.variable} antialiased bg-gray-100`}
+      >
         <Navbar />
         <main className="max-w-4xl mx-auto p-6">{children}</main>
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${atypFont.variable} ${garamondFont.variable} ${utsahaFont.variable} antialiased`}
-      >
-        {children}
       </body>
     </html>
   );
