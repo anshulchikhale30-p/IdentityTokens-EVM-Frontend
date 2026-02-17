@@ -1,0 +1,52 @@
+name: CI Next.js
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: CI Checks (lint → format → build)
+    runs-on: ubuntu-latest
+
+    steps:
+      # -------------------- CHECKOUT --------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # -------------------- SETUP --------------------
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Successful
+        run: echo "Dependencies installed successfully"
+
+      # -------------------- LINT --------------------
+      - name: Run Lint
+        run: npm run lint
+
+      - name: Lint Successful
+        run: echo "Lint checks passed"
+
+      # -------------------- FORMAT --------------------
+      - name: Check Formatting
+        run: npm run check-format
+
+      - name: Format Check Successful
+        run: echo "Formatting checks passed"
+
+      # -------------------- BUILD --------------------
+      - name: Build with Next.js
+        run: npm run build
+
+      - name: Build Successful
+        run: echo "Build completed successfully"
