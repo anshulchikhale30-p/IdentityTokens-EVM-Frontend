@@ -18,7 +18,8 @@ if (!process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID) {
 
 export const config = getDefaultConfig({
   appName: "Decentralized Identity Token",
-  projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || "",
+  projectId:
+    process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || "YOUR_PROJECT_ID",
   chains: [mainnet, sepolia, polygon, optimism, arbitrum, base],
   ssr: true,
 });
